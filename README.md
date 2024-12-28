@@ -50,9 +50,9 @@ Before booting macOS, you need to adjust specific BIOS settings. These configura
 
 ---
 
-## Important! Hidden Bios setting Adjustments
+## ⚠️ Important! Hidden Bios setting Adjustments ⚠️
 
-This EFI does not enabled `AppleXcpmCfgLock`, `framebuffer-fbmem`, or `framebuffer-stolenmem` tweaks. Thus, you need to manually adjust certain hidden BIOS settings by using **modGRUBShell.efi** before installation. Follow the instructions below to set the required values:
+This EFI does not enable `AppleXcpmCfgLock`, `framebuffer-fbmem`, or `framebuffer-stolenmem` tweaks in config.plist. Thus, you need to manually adjust certain hidden BIOS settings by using **modGRUBShell.efi** before installation. Follow the instructions below to set the required values:
 
 1. **Disable CFG Lock**  
    Run the following command in modGRUBShell:  
@@ -80,8 +80,8 @@ This EFI does not enabled `AppleXcpmCfgLock`, `framebuffer-fbmem`, or `framebuff
 
 To enable S4 hibernation sleep (Write-to-Disk), follow these steps:
 
-1. Set `ThirdPartyDrives` to `true` in the `config.plist`.
-2. Set `Hibernatemode` to `NVRAM` in the `config.plist`.
+1. Set `ThirdPartyDrives` to `true` in the config.plist.
+2. Set `Hibernatemode` to `NVRAM` in the config.plist.
 3. Run `pmset hibernatemode 25` in Terminal.
 
 Note: This feature appears to be unstable, particularly when waking from S4, as it may fail to reconnect the Touchpad device.
