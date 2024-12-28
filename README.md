@@ -50,9 +50,9 @@ Before booting macOS, you need to adjust specific BIOS settings. These configura
 
 ---
 
-## (Important) BIOS Value Adjustments
+## (Important) Hidden Bios setting Adjustments
 
-This EFI does not include the necessary patches for `AppleXcpmCfgLock`, `framebuffer-fbmem`, or `framebuffer-stolenmem`. Therefore, you need to manually adjust certain BIOS settings using **modGRUBShell.efi** before installation. Follow the instructions below to set the required values:
+This EFI does not include the necessary patches for `AppleXcpmCfgLock`, `framebuffer-fbmem`, or `framebuffer-stolenmem`. You need to manually adjust certain hidden BIOS settings by using **modGRUBShell.efi** before installation. Follow the instructions below to set the required values:
 
 1. **Disable CFG Lock**  
    Run the following command in modGRUBShell:  
@@ -72,12 +72,4 @@ This EFI does not include the necessary patches for `AppleXcpmCfgLock`, `framebu
    setup_var 0x796 0x3
    ```
 
-These adjustments are essential for ensuring stable graphics performance and smooth booting with macOS.
-
 ---
-
-## Troubleshooting Tips
-
-- **Wi-Fi Issues**: If Wi-Fi isn't working after installation, make sure you have downloaded and installed [HeliPort](https://github.com/OpenIntelWireless/HeliPort) as it provides necessary tools to manage Intel Wi-Fi cards.
-- **Verbose Mode**: If you're facing boot issues, add `-v` to the boot-args in OpenCore to enable verbose booting. This will help diagnose problems by displaying detailed log output.
-- **BIOS Variations**: Keep in mind that different business configurations of the Latitude 7280 may vary slightly in terms of hardware, so ensure your specific system is fully compatible with the EFI provided here.
