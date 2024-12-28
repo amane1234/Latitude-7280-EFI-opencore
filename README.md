@@ -52,7 +52,7 @@ Before booting macOS, you need to adjust specific BIOS settings. These configura
 
 ## (Important) Hidden Bios setting Adjustments
 
-This EFI does not include the necessary patches for `AppleXcpmCfgLock`, `framebuffer-fbmem`, or `framebuffer-stolenmem`. You need to manually adjust certain hidden BIOS settings by using **modGRUBShell.efi** before installation. Follow the instructions below to set the required values:
+This EFI does not enabled `AppleXcpmCfgLock`, `framebuffer-fbmem`, or `framebuffer-stolenmem` tweaks. Thus, you need to manually adjust certain hidden BIOS settings by using **modGRUBShell.efi** before installation. Follow the instructions below to set the required values:
 
 1. **Disable CFG Lock**  
    Run the following command in modGRUBShell:  
