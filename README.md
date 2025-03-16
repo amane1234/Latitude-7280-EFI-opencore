@@ -89,12 +89,15 @@ After installing macOS and rebooting into the system, follow these steps to comp
 
 To enable **S4 Hibernation (Write-to-Disk)**, follow these steps:
 
-1. Set `ThirdPartyDrives` to `true` in your `config.plist`.
-2. Set `Hibernatemode` to `NVRAM` in the `config.plist`.
+1. Set  `true` in your `config.plist`.
+2. Set `Hibernatemode` to `Auto` in the `config.plist`.
 3. Open the terminal and run:  
    ```
-   sudo pmset hibernatemode 25
+   sudo pmset hibernatemode 3
    ```
+If hibernation function is not working
+
+4. Put `Hibernationfixup.kext` and add [Hibernationfixup](https://github.com/acidanthera/HibernationFixup)
 
 **Note**: Hibernation functionality is experimental and may be unstable, especially when waking from S4. In some cases, issues like failure to reconnect the touchpad may occur.
 
