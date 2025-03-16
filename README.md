@@ -98,6 +98,7 @@ To enable **S4 Hibernation (Write-to-Disk)**, follow these steps:
 If hibernation function is not working
 
 4. Put `Hibernationfixup.kext` to your EFI and add `hbfx-ahbm=37` to your boot-args [Hibernationfixup](https://github.com/acidanthera/HibernationFixup)
+5. Put `RTCMemoryFixup.kext` to your EFI and add `rtcfx_exclude=0x80-0xAB` to your boot-args [RTCMemoryFixup](https://github.com/acidanthera/RTCMemoryFixup)
 
 **Note**: Hibernation functionality is experimental and may be unstable, especially when waking from S4. In some cases, issues like failure to reconnect the touchpad may occur.
 
