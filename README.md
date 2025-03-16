@@ -95,7 +95,7 @@ To enable **S4 Hibernation (Write-to-Disk)**, follow these steps:
    ```
    sudo pmset hibernatemode 3
    ```
-If hibernation function is not working
+If hibernation function is still not working,
 
 4. Put `Hibernationfixup.kext` to your EFI and add `hbfx-ahbm=37` to your boot-args [Hibernationfixup](https://github.com/acidanthera/HibernationFixup)
 5. Put `RTCMemoryFixup.kext` to your EFI and add `rtcfx_exclude=0x80-0xAB` to your boot-args [RTCMemoryFixup](https://github.com/acidanthera/RTCMemoryFixup)
