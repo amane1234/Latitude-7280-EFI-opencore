@@ -1,6 +1,5 @@
-# Dell Latitude 7280 - macOS Installation Guide
+# Dell Latitude 7280 Opencore EFI
 
-This guide provides detailed instructions for installing **macOS Ventura** on the **Dell Latitude 7280** using the **OpenCore bootloader**. It covers necessary prerequisites, including SMBIOS generation for iServices (iMessage, FaceTime, etc.), as well as key configurations to ensure smooth functionality post-installation.
 
 ### Important Notes:
 - **Generate Your Own SMBIOS**: To ensure the proper functioning of iServices (iMessage, FaceTime, etc.), it’s critical to **generate your own valid SMBIOS**.
@@ -78,10 +77,7 @@ These adjustments ensure compatibility with macOS and prevent boot issues relate
 
 ## Post-Installation
 
-After installing macOS and rebooting into the system, follow these steps to complete the installation and enable additional features:
-
-1. **ComboJack Installation**  
-   Open the terminal and run the `install.sh` script from the `TOOLS EFI MOD/ComboJack_Installer.zip` directory to enable the headphone jack functionality. After rebooting, the jack should appear as a usable device.
+To enable 3.5 mm headphone jack : [Combojack](https://github.com/macos86/ComboJack)
 
 ---
 
