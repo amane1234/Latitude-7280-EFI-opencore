@@ -12,15 +12,15 @@
 | Component                  | Specification                         |
 |----------------------------|---------------------------------------|
 | **CPU**                     | Intel i5-7200U                       |
-| **iGPU**                    | Intel® HD 620 Graphics                |
-| **LAN**                     | Intel I219-LM                         |
+| **iGPU**                    | Intel® HD 620 Graphics               |
+| **LAN**                     | Intel I219-LM                        |
 | **Audio**                   | Realtek ALC256                       |
-| **RAM**                     | Kingston 8 GB DDR4 2400 MHz           |
-| **Wi-Fi + Bluetooth**       | DW1820 (Intel-8260NGW)                |
-| **Storage**                 | SAMSUNG 128 GB NVMe                   |
-| **SMBIOS**                  | MacBookPro 14,1                       |
-| **Bootloader**              | OpenCore 1.0.3                        |
-| **macOS Version**           | macOS Ventura 13.3                    |
+| **RAM**                     | Kingston 8 GB DDR4 2400 MHz          |
+| **Wi-Fi + Bluetooth**       | DW1820 (Intel-8260NGW)               |
+| **Storage**                 | SN550                                |
+| **SMBIOS**                  | MacBookPro 14,1                      |
+| **Bootloader**              | OpenCore 1.0.3                       |
+| **macOS Version**           | macOS Ventura 13.3                   |
 
 ---
 
@@ -93,7 +93,7 @@ To enable **S4 Hibernation (Write-to-Disk)**, follow these steps:
    ```
 If hibernation function is still not working,
 
-4. Put `Hibernationfixup.kext` to your EFI and add `hbfx-ahbm=37` to your boot-args [Hibernationfixup](https://github.com/acidanthera/HibernationFixup)
+4. Put `Hibernationfixup.kext` to your EFI and add `hbfx-ahbm=128` to your boot-args [Hibernationfixup](https://github.com/acidanthera/HibernationFixup)
 5. Put `RTCMemoryFixup.kext` to your EFI and add `rtcfx_exclude=0x80-0xAB` to your boot-args [RTCMemoryFixup](https://github.com/acidanthera/RTCMemoryFixup)
 
 **Note**: Hibernation functionality is experimental and may be unstable, especially when waking from S4. In some cases, issues like failure to reconnect the touchpad may occur.
