@@ -3,7 +3,6 @@
 
 ### Important Notes:
 - **Generate Your Own SMBIOS**: To ensure the proper functioning of iServices (iMessage, FaceTime, etc.), it’s critical to **generate your own valid SMBIOS**.
-- **Wi-Fi Support**: This EFI uses `itlwm` (Intel Wi-Fi) for wireless connectivity. To enable Wi-Fi, download and install [HeliPort](https://github.com/OpenIntelWireless/HeliPort) for easier management.
 
 ---
 
@@ -96,6 +95,10 @@ If hibernation function is still not working,
 4. Put `Hibernationfixup.kext` to your EFI and add `hbfx-ahbm=128` to your boot-args [Hibernationfixup](https://github.com/acidanthera/HibernationFixup)
 5. Put `RTCMemoryFixup.kext` to your EFI and add `rtcfx_exclude=0x80-0xAB` to your boot-args [RTCMemoryFixup](https://github.com/acidanthera/RTCMemoryFixup)
 
-**Note**: Hibernation functionality is experimental and may be unstable, especially when waking from S4. In some cases, issues like failure to reconnect the touchpad may occur.
-
+6. Fix touchpad behavior after waking up. By doing this, the default I2C routing changes: APIC → GPIO.
+   
+   Run the following command in `modGRUBShell`:  
+   ```
+   setup_var 0x274 0x00
+   ```
 ---
